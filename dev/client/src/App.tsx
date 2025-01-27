@@ -7,6 +7,7 @@ import CXODashboard from "./components/CXODashboard";
 import FirmDashboard from "./components/FirmDashboard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Profile from "./components/auth/Profile";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/cxo-form" element={<CXOForm />}></Route>
         <Route path="/firm-form" element={<FirmForm />}></Route>
         <Route path="/cxo-dashboard" element={<CXODashboard />}></Route>

@@ -47,6 +47,7 @@ export async function loginUser(req, res) {
             maxAge: 1000 * 60 * 60 * 24,
           })
           .json({
+            name: `${userDoc.firstname} ${userDoc.lastname}`,
             email,
             id: userDoc._id,
             token,
@@ -58,6 +59,16 @@ export async function loginUser(req, res) {
   }
 }
 
-export async function getProfile() {}
+export async function logoutUser(req, res) {
+  const { email } = req.body;
 
-export async function logoutUser() {}
+  res
+    .cookie("token", "", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    })
+    .json({ msg: "Huh! Logged out.", email, success: true });
+}
+
+export async function getProfile() {}

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import API_ENDPOINT from "../../api/config";
+import { UserContext } from "../../UserContext";
 
 function Login() {
+  const { setUserInfo } = useContext(UserContext);
   const [redirect, setRedirect] = useState(false);
   const [user, setUser] = useState({
     email: "",
@@ -21,6 +23,7 @@ function Login() {
 
       if (resp.data.success) {
         setRedirect(true);
+        setUserInfo(resp.data);
       }
     } catch (error) {
       console.log("Error logging in.", error);
