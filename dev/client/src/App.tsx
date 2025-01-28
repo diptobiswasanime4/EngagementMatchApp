@@ -44,7 +44,7 @@ function Home() {
   }
   return (
     <div className="relative">
-      <img className="opacity-50" src="bg-1.png" alt="" />
+      <img className="opacity-50 w-full object-cover" src="bg-1.png" alt="" />
       <div className="absolute inset-0 border-2 mx-auto my-16 bg-black opacity-75 w-2/3 h-1/2">
         <div className="absolute inset-0 text-yellow-400 flex flex-col items-center gap-12">
           <div className="text-4xl font-semibold mt-16">
