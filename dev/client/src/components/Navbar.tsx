@@ -26,7 +26,9 @@ function Navbar() {
   if (userInfo.email) {
     return (
       <div className="bg-black h-32 py-4 px-16 flex justify-between">
-        <div className="text-white text-6xl">CXO</div>
+        <Link className="text-white text-6xl" to={"/"}>
+          CXO
+        </Link>
         <div className="flex gap-4">
           <Link
             className="text-white text-4xl hover:text-yellow-400 transition-colors duration-500 cursor-pointer"
@@ -46,7 +48,9 @@ function Navbar() {
   } else {
     return (
       <div className="bg-black h-32 py-4 px-16 flex justify-between">
-        <div className="text-white text-6xl">CXO</div>
+        <Link className="text-white text-6xl" to={"/"}>
+          CXO
+        </Link>
         <div className="flex gap-4">
           <Link
             className="text-white text-4xl hover:text-yellow-400 transition-colors duration-500 cursor-pointer"
