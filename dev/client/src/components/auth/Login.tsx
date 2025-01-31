@@ -30,7 +30,7 @@ function Login() {
     }
   }
   if (redirect) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/join-now"} />;
   }
   return (
     <div className="bg-black flex flex-col gap-6 items-center pb-64">

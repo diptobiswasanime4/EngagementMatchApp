@@ -7,7 +7,9 @@ function Footer() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -20,7 +22,6 @@ function Footer() {
   return (
     <footer className="bg-[#0A192F] text-white py-12 px-6 md:px-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-
         {/* Company Info */}
         <div className="flex flex-col space-y-2">
           <h2 className="text-xl font-semibold text-[#FFD700]">CXO India</h2>
@@ -31,9 +32,15 @@ function Footer() {
         {/* Navigation Links */}
         <div className="flex flex-col space-y-2">
           <h3 className="text-xl font-semibold text-[#FFD700]">Quick Links</h3>
-          <a href="/events" className="hover:text-[#FFD700] transition">Events</a>
-          <a href="/blogs" className="hover:text-[#FFD700] transition">Blogs | Newsletters</a>
-          <a href="/about" className="hover:text-[#FFD700] transition">About Us</a>
+          <a href="/events" className="hover:text-[#FFD700] transition">
+            Events
+          </a>
+          <a href="/blogs" className="hover:text-[#FFD700] transition">
+            Blogs | Newsletters
+          </a>
+          <a href="/about" className="hover:text-[#FFD700] transition">
+            About Us
+          </a>
         </div>
 
         {/* Contact Form */}
@@ -68,7 +75,7 @@ function Footer() {
             />
             <button
               type="submit"
-              className="bg-[#0047AB] px-5 py-2 rounded-md hover:bg-[#00838F] transition w-full"
+              className="bg-[#0047AB] cursor-pointer px-5 py-2 rounded-md hover:bg-[#00838F] transition w-full"
             >
               Join Now
             </button>
@@ -80,9 +87,13 @@ function Footer() {
       <div className="mt-12 border-t border-gray-600 pt-6 text-center">
         <p className="text-gray-400">©2025 CXO India. All Rights Reserved.</p>
         <div className="mt-2 flex justify-center space-x-4">
-          <a href="/privacy-notice" className="hover:text-[#FFD700] transition">Privacy Notice</a>
+          <a href="/privacy-notice" className="hover:text-[#FFD700] transition">
+            Privacy Notice
+          </a>
           <span className="text-gray-400">|</span>
-          <a href="/cookie-policy" className="hover:text-[#FFD700] transition">Cookie Policy</a>
+          <a href="/cookie-policy" className="hover:text-[#FFD700] transition">
+            Cookie Policy
+          </a>
         </div>
       </div>
     </footer>

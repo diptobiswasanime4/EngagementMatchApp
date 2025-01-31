@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Profile from "./components/auth/Profile";
 import { useState } from "react";
+import JoinNow from "./components/JoinNow";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/join-now" element={<JoinNow />}></Route>
         <Route path="/cxo-form" element={<CXOForm />}></Route>
         <Route path="/firm-form" element={<FirmForm />}></Route>
         <Route path="/cxo-dashboard" element={<CXODashboard />}></Route>
@@ -55,13 +57,13 @@ function Home() {
         </p>
         <div className="mt-8 flex justify-center gap-6">
           <button
-            className="bg-[#0047AB] text-white px-6 py-3 rounded-md text-lg hover:bg-[#00838F] transition"
+            className="bg-[#0047AB] cursor-pointer text-white px-6 py-3 rounded-md text-lg hover:bg-[#00838F] transition"
             onClick={() => setLink("/register")}
           >
             Join Now
           </button>
           <button
-            className="border-2 border-[#FFD700] text-[#FFD700] px-6 py-3 rounded-md text-lg hover:bg-[#FFD700] hover:text-black transition"
+            className="border-2 cursor-pointer border-[#FFD700] text-[#FFD700] px-6 py-3 rounded-md text-lg hover:bg-[#FFD700] hover:text-black transition"
             onClick={() => setLink("/how-it-works")}
           >
             How ExecBridge Works
@@ -74,19 +76,37 @@ function Home() {
         <h2 className="text-3xl font-bold text-center">How ExecBridge Works</h2>
         <div className="flex justify-center gap-12 mt-8">
           <div className="bg-white shadow-md p-6 rounded-md w-1/3 text-center">
-            <img src="image_1.jpg" alt="Post Requirements" className="mx-auto h-32" />
-            <h3 className="text-xl font-semibold mt-4">Post Your Requirements</h3>
-            <p className="text-[#545E75] mt-2">Easily submit projects and needs for expert CXO advisors.</p>
+            <img
+              src="image_1.jpg"
+              alt="Post Requirements"
+              className="mx-auto h-32"
+            />
+            <h3 className="text-xl font-semibold mt-4">
+              Post Your Requirements
+            </h3>
+            <p className="text-[#545E75] mt-2">
+              Easily submit projects and needs for expert CXO advisors.
+            </p>
           </div>
           <div className="bg-white shadow-md p-6 rounded-md w-1/3 text-center">
             <img src="image_2.jpg" alt="Matchmaking" className="mx-auto h-32" />
-            <h3 className="text-xl font-semibold mt-4">Get Matched with CXOs</h3>
-            <p className="text-[#545E75] mt-2">Our smart algorithm connects you with the right experts.</p>
+            <h3 className="text-xl font-semibold mt-4">
+              Get Matched with CXOs
+            </h3>
+            <p className="text-[#545E75] mt-2">
+              Our smart algorithm connects you with the right experts.
+            </p>
           </div>
           <div className="bg-white shadow-md p-6 rounded-md w-1/3 text-center">
-            <img src="image_3.jpg" alt="Engage with Experts" className="mx-auto h-32" />
+            <img
+              src="image_3.jpg"
+              alt="Engage with Experts"
+              className="mx-auto h-32"
+            />
             <h3 className="text-xl font-semibold mt-4">Engage with Experts</h3>
-            <p className="text-[#545E75] mt-2">Confidential, efficient, and hassle-free advisory services.</p>
+            <p className="text-[#545E75] mt-2">
+              Confidential, efficient, and hassle-free advisory services.
+            </p>
           </div>
         </div>
       </div>
@@ -100,12 +120,25 @@ function Home() {
           <div className="w-1/2">
             <h3 className="text-2xl font-semibold">For CXOs</h3>
             <ul className="list-disc mt-4 ml-6 text-[#545E75]">
-              <li>💼 <strong>Flexibility</strong>: Engage in short-term projects without commitments.</li>
-              <li>🌐 <strong>Exclusive Network</strong>: Connect with top-tier advisory opportunities.</li>
-              <li>🔒 <strong>Privacy</strong>: Guaranteed confidentiality in all engagements.</li>
+              <li>
+                💼 <strong>Flexibility</strong>: Engage in short-term projects
+                without commitments.
+              </li>
+              <li>
+                🌐 <strong>Exclusive Network</strong>: Connect with top-tier
+                advisory opportunities.
+              </li>
+              <li>
+                🔒 <strong>Privacy</strong>: Guaranteed confidentiality in all
+                engagements.
+              </li>
             </ul>
           </div>
-          <img src="image_5.jpg" alt="For CXOs" className="w-1/3 rounded-md shadow-md" />
+          <img
+            src="image_5.jpg"
+            alt="For CXOs"
+            className="w-1/3 rounded-md shadow-md"
+          />
         </div>
 
         {/* Business Benefits */}
@@ -113,31 +146,58 @@ function Home() {
           <div className="w-1/2">
             <h3 className="text-2xl font-semibold">For Businesses</h3>
             <ul className="list-disc mt-4 ml-6 text-[#545E75]">
-              <li>📊 <strong>Access to Expertise</strong>: Connect with seasoned professionals.</li>
-              <li>⏳ <strong>Time Efficiency</strong>: Rapid onboarding for quick advisory services.</li>
-              <li>🔏 <strong>Discreet Service</strong>: Full privacy and confidentiality assured.</li>
+              <li>
+                📊 <strong>Access to Expertise</strong>: Connect with seasoned
+                professionals.
+              </li>
+              <li>
+                ⏳ <strong>Time Efficiency</strong>: Rapid onboarding for quick
+                advisory services.
+              </li>
+              <li>
+                🔏 <strong>Discreet Service</strong>: Full privacy and
+                confidentiality assured.
+              </li>
             </ul>
           </div>
-          <img src="image_4.jpg" alt="For Businesses" className="w-1/3 rounded-md shadow-md" />
+          <img
+            src="image_4.jpg"
+            alt="For Businesses"
+            className="w-1/3 rounded-md shadow-md"
+          />
         </div>
       </div>
 
       {/* Trust & Security Section */}
       <div className="py-16 bg-[#0A192F] text-white text-center">
         <h2 className="text-3xl font-bold text-[#FFD700]">Trust & Security</h2>
-        <p className="mt-4 text-gray-300">ExecBridge ensures a safe and confidential environment for all users.</p>
+        <p className="mt-4 text-gray-300">
+          ExecBridge ensures a safe and confidential environment for all users.
+        </p>
         <div className="flex justify-center gap-12 mt-8">
           <div className="bg-[#1E1E1E] shadow-md p-6 rounded-md w-1/3 text-center">
-            <h3 className="text-xl font-semibold text-[#FFD700]">User Verification</h3>
-            <p className="mt-2 text-gray-300">Strict vetting process for CXOs and businesses.</p>
+            <h3 className="text-xl font-semibold text-[#FFD700]">
+              User Verification
+            </h3>
+            <p className="mt-2 text-gray-300">
+              Strict vetting process for CXOs and businesses.
+            </p>
           </div>
           <div className="bg-[#1E1E1E] shadow-md p-6 rounded-md w-1/3 text-center">
-            <h3 className="text-xl font-semibold text-[#FFD700]">Matchmaking Algorithm</h3>
-            <p className="mt-2 text-gray-300">AI-powered matching for optimal connections.</p>
+            <h3 className="text-xl font-semibold text-[#FFD700]">
+              Matchmaking Algorithm
+            </h3>
+            <p className="mt-2 text-gray-300">
+              AI-powered matching for optimal connections.
+            </p>
           </div>
           <div className="bg-[#1E1E1E] shadow-md p-6 rounded-md w-1/3 text-center">
-            <h3 className="text-xl font-semibold text-[#FFD700]">Privacy Settings</h3>
-            <p className="mt-2 text-gray-300">Customizable settings for anonymity and security.</p>
+            <h3 className="text-xl font-semibold text-[#FFD700]">
+              Privacy Settings
+            </h3>
+            <p className="mt-2 text-gray-300">
+              Customizable settings for anonymity and security.
+            </p>
           </div>
         </div>
       </div>
@@ -145,9 +205,11 @@ function Home() {
       {/* Call to Action */}
       <div className="py-12 text-center">
         <h2 className="text-3xl font-bold">Join ExecBridge Today</h2>
-        <p className="mt-4 text-[#545E75]">Connect with top CXOs or get exclusive advisory opportunities.</p>
+        <p className="mt-4 text-[#545E75]">
+          Connect with top CXOs or get exclusive advisory opportunities.
+        </p>
         <button
-          className="mt-6 bg-[#0047AB] text-white px-8 py-3 rounded-md text-lg hover:bg-[#00838F] transition"
+          className="mt-6 cursor-pointer bg-[#0047AB] text-white px-8 py-3 rounded-md text-lg hover:bg-[#00838F] transition"
           onClick={() => setLink("/register")}
         >
           Sign Up Now

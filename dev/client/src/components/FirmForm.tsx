@@ -19,7 +19,7 @@ function FirmForm() {
     console.log(resp);
   }
   return (
-    <div className="flex flex-col gap-6 items-center">
+    <div className="flex flex-col gap-6 items-center mb-24">
       <div className="text-5xl mt-12 mb-8">
         Post A New Engagement On ExecBridge
       </div>

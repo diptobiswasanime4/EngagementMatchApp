@@ -1,10 +1,10 @@
-import User from "../model/User.js";
+import Engagement from "../model/Engagement.js";
 
 export async function addEngagement(req, res) {
   const { email, ...data } = req.body;
   console.log(req.body);
 
-  const userDoc = await User.findOneAndUpdate(
+  const engagementDoc = await Engagement.findOneAndUpdate(
     { email },
     { $set: data },
     { new: true }
