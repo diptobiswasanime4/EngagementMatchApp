@@ -7,6 +7,8 @@ import {
   logoutUser,
   getProfile,
 } from "./controller/authController.js";
+import { updateCXO } from "./controller/cxoController.js";
+import { addEngagement } from "./controller/firmController.js";
 import { PORT, mongoConnectionString } from "./config/config.js";
 
 const app = express();
@@ -31,6 +33,10 @@ app.post("/login", loginUser);
 app.post("/logout", logoutUser);
 
 app.get("/profile", getProfile);
+
+app.post("/updateCXO", updateCXO);
+
+app.post("/addEngagement", addEngagement);
 
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}`);

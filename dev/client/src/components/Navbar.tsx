@@ -26,7 +26,6 @@ function Navbar() {
       console.error("Logout failed", error);
     }
   }
-
   return (
     <nav className="bg-[#0A192F] text-white py-4 px-8 md:px-16 flex justify-between items-center shadow-md">
       {/* Logo */}
@@ -90,6 +89,19 @@ function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-[#0A192F] text-white flex flex-col items-center gap-6 py-6 shadow-md">
           <Link to="/how-it-works" onClick={() => setMenuOpen(false)}>
             How It Works
+    );
+  } else {
+    return (
+      <div className="bg-black h-32 py-4 px-16 flex justify-between">
+        <Link className="text-white text-6xl" to={"/"}>
+          CXO
+        </Link>
+        <div className="flex gap-4">
+          <Link
+            className="text-white text-4xl hover:text-yellow-400 transition-colors duration-500 cursor-pointer"
+            to={"/login"}
+          >
+            Sign In
           </Link>
           <Link to="/services" onClick={() => setMenuOpen(false)}>
             Services

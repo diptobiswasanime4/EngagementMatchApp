@@ -42,7 +42,7 @@ function Login() {
         </Link>
       </div>
       <input
-        className="bg-white text-black text-xl p-1"
+        className="bg-white rounded-xs text-black text-xl p-1"
         type="text"
         placeholder="Email"
         value={user.email}
@@ -51,7 +51,7 @@ function Login() {
         }
       />
       <input
-        className="bg-white text-black text-xl p-1"
+        className="bg-white rounded-xs text-black text-xl p-1"
         type="password"
         placeholder="Password"
         value={user.password}

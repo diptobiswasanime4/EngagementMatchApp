@@ -33,7 +33,7 @@ function Register() {
     <div className="flex flex-col gap-6 items-center">
       <div className="text-5xl mt-16 mb-2">Sign Up</div>
       <input
-        className="bg-black text-yellow-300 text-xl p-1"
+        className="bg-black rounded-xs text-yellow-300 text-xl p-1"
         type="text"
         placeholder="Firstname"
         value={user.firstname}
@@ -42,7 +42,7 @@ function Register() {
         }
       />
       <input
-        className="bg-black text-yellow-300 text-xl p-1"
+        className="bg-black rounded-xs text-yellow-300 text-xl p-1"
         type="text"
         placeholder="Lastname"
         value={user.lastname}
@@ -51,7 +51,7 @@ function Register() {
         }
       />
       <input
-        className="bg-black text-yellow-300 text-xl p-1"
+        className="bg-black rounded-xs text-yellow-300 text-xl p-1"
         type="text"
         placeholder="Email"
         value={user.email}
@@ -60,7 +60,7 @@ function Register() {
         }
       />
       <input
-        className="bg-black text-yellow-300 text-xl p-1"
+        className="bg-black rounded-xs text-yellow-300 text-xl p-1"
         type="password"
         placeholder="Password"
         value={user.password}
