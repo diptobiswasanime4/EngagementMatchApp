@@ -23,7 +23,7 @@ function FirmForm() {
       <div className="text-5xl mt-12 mb-8">
         Post A New Engagement On ExecBridge
       </div>
-      <div className="flex flex-col gap-8 w-2/3 bg-black py-12 px-8 rounded-2xl border-2 border-yellow-500">
+      <div className="flex flex-col gap-8 w-2/3 bg-[#0A192F] py-12 px-8 rounded-2xl border-2 border-yellow-500">
         <div className="flex gap-12">
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"

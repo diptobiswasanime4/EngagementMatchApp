@@ -34,8 +34,8 @@ function Login() {
     return <Navigate to={"/join-now"} />;
   }
   return (
-    <div className="bg-[#0A192F] flex flex-col gap-6 items-center pb-64">
-      <div className="text-yellow-400 text-5xl mt-16">Log In</div>
+    <div className="bg-[#0A192F] flex flex-col gap-6 items-center pb-64 h-screen">
+      <div className="text-yellow-400 text-5xl mt-50">Log In</div>
       <div className="text-yellow-600 text-lg">
         New to this site?{" "}
         <Link to={"/register"}>

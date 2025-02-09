@@ -7,16 +7,16 @@ function JoinNow() {
     return <Navigate to={`${link}`} />;
   }
   return (
-    <div className="relative">
-      <img className="opacity-50 w-full object-cover" src="bg-1.png" alt="" />
-      <div className="absolute inset-0 border-2 mx-auto my-16 bg-black opacity-75 w-2/3 h-1/2">
-        <div className="absolute inset-0 text-white flex flex-col items-center gap-12">
-          <div className="text-4xl font-semibold mt-16">
+    <div className="flex items-center mb-24">
+      <div className=" flex w-full items-center justify-center">
+      <div className="inset-0 border-2 mx-auto my-16  bg-[#0A192F] opacity-100 w-2/3 h-1/2">
+        <div className="flex text-white flex flex-col items-center justify-center gap-12">
+          <div className="text-4xl font-semibold mt-16 items-center">
             Join Our Network as a CXO or a Firm
           </div>
           <div className="flex">
             <div className="mx-12">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col justify center items-center">
                 <div className="">Join us as a CXO to become part of the</div>
                 <div className="">largest network of CXOs</div>
               </div>
@@ -41,6 +41,7 @@ function JoinNow() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

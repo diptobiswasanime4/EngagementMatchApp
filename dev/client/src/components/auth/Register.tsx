@@ -31,8 +31,8 @@ function Register() {
     return <Navigate to={"/login"} />;
   }
   return (
-    <div className="flex flex-col gap-6 items-center bg-[#0A192F]">
-      <div className="text-yellow-400 text-5xl mt-16 mb-2 bg-[#0A192F] ">Sign Up</div>
+    <div className="flex flex-col gap-6 items-center bg-[#0A192F] h-screen">
+      <div className="text-yellow-400 text-5xl mt-50 mb-2 bg-[#0A192F] ">Sign Up</div>
       <Form.Root className="FormRoot">
           <Form.Field className="FormField" name="Firstname">
             <div
