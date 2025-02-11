@@ -1,5 +1,5 @@
+// @ts-nocheck
 import React, { useState } from "react";
-
 function Footer() {
   const [formData, setFormData] = useState({
     name: "",

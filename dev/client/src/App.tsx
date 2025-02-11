@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import CXOForm from "./components/CXOForm";

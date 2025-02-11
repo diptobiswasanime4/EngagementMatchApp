@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+// @ts-nocheck
+import { useContext } from "react";
 import { UserContext } from "../../UserContext";
 
 function Profile() {

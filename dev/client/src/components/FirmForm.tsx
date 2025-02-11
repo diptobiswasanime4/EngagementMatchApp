@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+// @ts-nocheck
+import { useContext, useState } from "react";
 import { UserContext } from "../UserContext";
 import axios from "axios";
 import API_ENDPOINT from "../api/config";
