@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
   firstname: String,
@@ -15,6 +15,7 @@ const UserSchema = new mongoose.Schema({
   locationPreference: String,
   skills: String,
   loginCount: Number,
+  isCXO: { type: Boolean, default: false },
 });
 
 const User = mongoose.model("User", UserSchema);

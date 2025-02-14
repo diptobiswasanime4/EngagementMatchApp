@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../model/User.js";
 import { JWT_SECRET } from "../config/config.js";
+import Contact from "../model/Contact.js";
 
 export async function registerUser(req, res) {
   const { firstname, lastname, email, password } = req.body;
@@ -72,3 +73,15 @@ export async function logoutUser(req, res) {
 }
 
 export async function getProfile() {}
+
+export async function addContact(req, res) {
+  const data = req.body;
+
+  console.log(data);
+
+  const newContact = await Contact({ ...data });
+
+  await newContact.save();
+
+  res.json({ msg: "Contact added", success: true });
+}

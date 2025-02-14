@@ -11,7 +11,7 @@ function FirmDashboard() {
       <p className="mt-10 text-[#FFD700]">
         Let's get started with your posted engagements
       </p>
-      <div className="grid grid-cols-3 ml-15">
+      <div className="grid grid-cols-3 gap-10 ml-15">
         <div className=" my-4 mt-20 p-2 w-lg rounded-lg shadow-lg bg-white border border-gray-200 transition-transform hover:scale-[1.02] hover:shadow-2xl">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm text-gray-500">2 days ago</p>

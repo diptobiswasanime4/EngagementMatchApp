@@ -1,5 +1,8 @@
 // @ts-nocheck
 import React, { useState } from "react";
+import axios from "axios";
+import API_ENDPOINT from "../api/config";
+
 function Footer() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,10 +16,21 @@ function Footer() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     // You can integrate an API here to send the contact details
+    const resp = await axios.post(
+      `${API_ENDPOINT}/addContact`,
+      { ...formData },
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(resp);
   };
 
   return (

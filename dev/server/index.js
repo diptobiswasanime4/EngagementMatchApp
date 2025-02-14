@@ -6,6 +6,7 @@ import {
   loginUser,
   logoutUser,
   getProfile,
+  addContact,
 } from "./controller/authController.js";
 import { updateCXO } from "./controller/cxoController.js";
 import { addEngagement } from "./controller/firmController.js";
@@ -37,6 +38,8 @@ app.get("/profile", getProfile);
 app.post("/updateCXO", updateCXO);
 
 app.post("/addEngagement", addEngagement);
+
+app.post("/addContact", addContact);
 
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}`);

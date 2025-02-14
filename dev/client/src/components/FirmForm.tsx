@@ -5,11 +5,14 @@ import axios from "axios";
 import API_ENDPOINT from "../api/config";
 
 function FirmForm() {
+  const { userInfo } = useContext(UserContext);
   const [engagement, setEngagement] = useState({});
   async function addEngagement() {
+    console.log(engagement);
+
     const resp = await axios.post(
       `${API_ENDPOINT}/addEngagement`,
-      { ...engagement, email: userInfo.email },
+      { ...engagement, postedBy: userInfo.email },
       {
         method: "POST",
         headers: {
@@ -29,50 +32,24 @@ function FirmForm() {
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
             type="text"
-            placeholder="Phone"
-            value={engagement.phone}
+            placeholder="Engagement Role"
+            value={engagement.engagementRole}
             onChange={(e) =>
               setEngagement((initEngagement) => ({
                 ...initEngagement,
-                phone: e.target.value,
+                engagementRole: e.target.value,
               }))
             }
           />
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
             type="text"
-            placeholder="Highest Qualification"
-            value={engagement.highestQualification}
+            placeholder="Engagement Type"
+            value={engagement.engagementType}
             onChange={(e) =>
               setEngagement((initEngagement) => ({
                 ...initEngagement,
-                highestQualification: e.target.value,
-              }))
-            }
-          />
-        </div>
-        <div className="flex gap-12">
-          <input
-            className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
-            type="text"
-            placeholder="Years of Experience"
-            value={engagement.yearsOfExp}
-            onChange={(e) =>
-              setEngagement((initEngagement) => ({
-                ...initEngagement,
-                yearsOfExp: e.target.value,
-              }))
-            }
-          />
-          <input
-            className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
-            type="text"
-            placeholder="Current Organization"
-            value={engagement.currentOrg}
-            onChange={(e) =>
-              setEngagement((initEngagement) => ({
-                ...initEngagement,
-                currentOrg: e.target.value,
+                engagementType: e.target.value,
               }))
             }
           />
@@ -93,12 +70,12 @@ function FirmForm() {
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
             type="text"
-            placeholder="Domain of Expertise"
-            value={engagement.domainOfExpertise}
+            placeholder="Department"
+            value={engagement.department}
             onChange={(e) =>
               setEngagement((initEngagement) => ({
                 ...initEngagement,
-                domainOfExpertise: e.target.value,
+                department: e.target.value,
               }))
             }
           />
@@ -107,24 +84,24 @@ function FirmForm() {
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
             type="text"
-            placeholder="Current Title"
-            value={engagement.curTitle}
+            placeholder="Educational Requirements"
+            value={engagement.educationalRequirements}
             onChange={(e) =>
               setEngagement((initEngagement) => ({
                 ...initEngagement,
-                curTitle: e.target.value,
+                educationalRequirements: e.target.value,
               }))
             }
           />
           <input
             className="bg-white w-1/2 text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
             type="text"
-            placeholder="Location Preference"
-            value={engagement.locationPreference}
+            placeholder="Required Experience"
+            value={engagement.requiredExperience}
             onChange={(e) =>
               setEngagement((initEngagement) => ({
                 ...initEngagement,
-                locationPreference: e.target.value,
+                requiredExperience: e.target.value,
               }))
             }
           />
@@ -132,12 +109,24 @@ function FirmForm() {
         <input
           className="bg-white text-black rounded-full text-2xl p-2 border-2 border-yellow-400"
           type="text"
-          placeholder="Skills"
+          placeholder="Skills Required"
           value={engagement.skills}
           onChange={(e) =>
             setEngagement((initEngagement) => ({
               ...initEngagement,
               skills: e.target.value,
+            }))
+          }
+        />
+        <textarea
+          className="bg-white text-black h-32 rounded-2xl text-2xl p-2 border-2 border-yellow-400"
+          type="text"
+          placeholder="Engagement Description"
+          value={engagement.engagementDescription}
+          onChange={(e) =>
+            setEngagement((initEngagement) => ({
+              ...initEngagement,
+              engagementDescription: e.target.value,
             }))
           }
         />

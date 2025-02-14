@@ -13,7 +13,8 @@ function Register() {
     email: "",
     password: "",
   });
-  async function register() {
+  async function register(e) {
+    e.preventDefault();
     try {
       const resp = await axios.post(`${API_ENDPOINT}/register`, user, {
         method: "POST",
@@ -21,6 +22,8 @@ function Register() {
           "Content-Type": "application/json",
         },
       });
+      console.log(resp);
+
       if (resp.data.success) {
         setRedirect(true);
       }
@@ -154,7 +157,9 @@ function Register() {
           </Form.Control>
         </Form.Field>
         <Form.Submit asChild>
-          <button className="Button">Submit</button>
+          <button className="Button" onClick={register}>
+            Submit
+          </button>
         </Form.Submit>
       </Form.Root>
       {/* <input

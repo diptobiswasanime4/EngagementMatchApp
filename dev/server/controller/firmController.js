@@ -1,16 +1,17 @@
 import Engagement from "../model/Engagement.js";
 
 export async function addEngagement(req, res) {
-  const { email, ...data } = req.body;
+  const data = req.body;
   console.log(req.body);
 
-  const engagementDoc = await Engagement.findOneAndUpdate(
-    { email },
-    { $set: data },
-    { new: true }
-  );
+  const newEngagement = new Engagement({
+    ...data,
+  });
+
+  await newEngagement.save();
 
   res.json({
+    newEngagement,
     msg: "Engagement data added successfully",
     success: true,
   });

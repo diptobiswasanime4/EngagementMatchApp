@@ -13,7 +13,8 @@ function Login() {
     email: "",
     password: "",
   });
-  async function login() {
+  async function login(e) {
+    e.preventDefault();
     try {
       const resp = await axios.post(`${API_ENDPOINT}/login`, user, {
         method: "POST",
@@ -112,7 +113,9 @@ function Login() {
           </Form.Control>
         </Form.Field>
         <Form.Submit asChild>
-          <button className="Button">Submit</button>
+          <button className="Button" onClick={login}>
+            Submit
+          </button>
         </Form.Submit>
       </Form.Root>
       {/* <input
