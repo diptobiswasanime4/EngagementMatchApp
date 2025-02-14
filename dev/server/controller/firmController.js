@@ -16,3 +16,15 @@ export async function addEngagement(req, res) {
     success: true,
   });
 }
+
+export async function getEngagements(req, res) {
+  const email = req.query.email;
+
+  const Engagements = await Engagement.find({ postedBy: email });
+
+  res.json({
+    msg: "Engagements sent",
+    engagements: Engagements,
+    success: true,
+  });
+}

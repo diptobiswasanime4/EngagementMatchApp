@@ -11,7 +11,7 @@ function CXOForm() {
   async function updateCXO() {
     const resp = await axios.post(
       `${API_ENDPOINT}/updateCXO`,
-      { ...user, email: userInfo.email },
+      { ...user, email: userInfo.email, isCXO: true },
       {
         method: "POST",
         headers: {

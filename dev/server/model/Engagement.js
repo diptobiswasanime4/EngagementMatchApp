@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 
 const EngagementSchema = new mongoose.Schema({
+  firstname: String,
+  lastname: String,
   postedBy: { type: String, default: "ANON" },
   title: String,
   engagementRole: String,

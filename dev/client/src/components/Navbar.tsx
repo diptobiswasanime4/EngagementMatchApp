@@ -45,8 +45,10 @@ const Navbar = () => {
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List one">
-              <ListItem href="https://stitches.dev/" title="ExecBridge">
-                Unlock Confidential, High-Impact Opportunities.
+              <ListItem title="ExecBridge">
+                <Link to={"/"}>
+                  Unlock Confidential, High-Impact Opportunities.
+                </Link>
               </ListItem>
               <ListItem href="/colors" title="Events">
                 Join us in our inspiring discussions in our exciting events
@@ -62,11 +64,8 @@ const Navbar = () => {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link
-            className="NavigationMenuLink"
-            href="/cxo-dashboard"
-          >
-            Dashboard
+          <NavigationMenu.Link className="NavigationMenuLink">
+            <Link to="/firm-dashboard">Dashboard</Link>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
@@ -90,7 +89,11 @@ const Navbar = () => {
       </div>
 
       {userInfo.email ? (
-        <button onClick={logout} className="Callout">
+        <button
+          onClick={logout}
+          className="Callout"
+          className="bg-white absolute right-3 px-5 py-2 content-center rounded-md hover:bg-[#FFD700] transition"
+        >
           Sign Out
         </button>
       ) : (
