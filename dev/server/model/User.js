@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
   skills: String,
   loginCount: Number,
   isCXO: { type: Boolean, default: false },
+  isFirm: { type: Boolean, default: false },
 });
 
 const User = mongoose.model("User", UserSchema);
